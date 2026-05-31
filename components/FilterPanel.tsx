@@ -122,7 +122,17 @@ export default function FilterPanel({ stats, query, setQuery, category, setCateg
 
   return (
     <aside style={s.panel}>
-      <div style={s.header}>bookmarks</div>
+      <div style={{ ...s.header, display: 'flex', justifyContent: 'space-between', alignItems: 'center', textTransform: 'none' }}>
+        <span>bookmarks</span>
+        <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
+          <button onClick={onSyncClick} style={{ fontSize: 10, color: 'var(--text-dim)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit', padding: 0, letterSpacing: '0.08em' }}>
+            sync
+          </button>
+          <Link href="/trends" style={{ fontSize: 10, color: 'var(--text-muted)', textDecoration: 'none', letterSpacing: '0.08em' }}>
+            trends →
+          </Link>
+        </div>
+      </div>
 
       <div style={s.searchWrap}>
         <input
@@ -220,18 +230,8 @@ export default function FilterPanel({ stats, query, setQuery, category, setCateg
         )}
       </div>
 
-      <div style={{ padding: '8px 14px', borderTop: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <span style={{ fontSize: 10, color: 'var(--text-dim)' }}>
-          {stats ? stats.total.toLocaleString() : '—'} bookmarks
-        </span>
-        <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
-          <button onClick={onSyncClick} style={{ fontSize: 10, color: 'var(--text-dim)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit', padding: 0 }}>
-            sync
-          </button>
-          <Link href="/trends" style={{ fontSize: 10, color: 'var(--green)', textDecoration: 'none' }}>
-            trends →
-          </Link>
-        </div>
+      <div style={{ padding: '8px 14px', borderTop: '1px solid var(--border)', fontSize: 10, color: 'var(--text-dim)' }}>
+        {stats ? stats.total.toLocaleString() : '—'} bookmarks
       </div>
     </aside>
   );
