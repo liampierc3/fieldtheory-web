@@ -2,7 +2,13 @@
 
 A local web UI for browsing and searching your X/Twitter bookmarks, built on top of [fieldtheory](https://github.com/afar1/fieldtheory-cli).
 
-![Three-panel UI with filters, bookmark list, and tweet detail](screenshot.png)
+![Main view](mainview1.jpg)
+
+![Detail view](mainview2.jpg)
+
+![Authors and navigation](nav.jpg)
+
+![Trends view](trends.jpg)
 
 ## Features
 
@@ -26,7 +32,7 @@ ft sync --browser chrome   # or brave, firefox, edge
 ## Setup
 
 ```bash
-git clone https://github.com/your-username/fieldtheory-web
+git clone https://github.com/liampierc3/fieldtheory-web
 cd fieldtheory-web
 npm install
 cp .env.example .env.local
