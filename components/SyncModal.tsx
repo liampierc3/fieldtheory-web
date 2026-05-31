@@ -100,7 +100,7 @@ export default function SyncModal({ onClose, onDone }: Props) {
           background: 'var(--bg)',
         }}>
           {lines.length === 0 && status === 'idle' && (
-            <span style={{ color: 'var(--text-dim)' }}>ready. make sure brave is open and logged into x.com.</span>
+            <span style={{ color: 'var(--text-dim)' }}>ready. make sure your browser is open and logged into x.com.</span>
           )}
           {lines.map((l, i) => (
             <div key={i} style={{ color: l.startsWith('✓') ? 'var(--green)' : 'var(--text-muted)' }}>{l}</div>
