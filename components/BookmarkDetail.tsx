@@ -198,10 +198,10 @@ export default function BookmarkDetail({ bookmark, onAuthorClick }: Props) {
           style={{
             display: 'inline-block',
             fontSize: 11,
-            color: 'var(--text-dim)',
+            color: 'var(--text-muted)',
             textDecoration: 'none',
             padding: '5px 10px',
-            border: '1px solid var(--border)',
+            border: '1px solid var(--border-accent)',
             borderRadius: 3,
             transition: 'border-color 0.1s, color 0.1s',
           }}
